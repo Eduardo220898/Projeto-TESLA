@@ -10,3 +10,11 @@ function desaparecerformulario(){
     formulario.style.left = "-50%"
 
 }
+document.addEventListener("DOMContentLoaded", () => {
+    const video = document.querySelector("video");
+    if (video) {
+        video.play().catch(() => {
+            console.log("O navegador bloqueou o autoplay. Usuário precisa interagir.");
+        });
+    }
+});
